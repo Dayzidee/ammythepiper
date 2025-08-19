@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AllythePiper Foundation | Making a Difference</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins (600, 700) & Inter (400) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "midnight-blue": "#0a192f",
+              "off-white": "#E6F1FF",
+              "radiant-gold": "#FFD700",
+              "soft-orange": "#FFA500",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.icon" type="image/x-icon" />
+
+    <!-- Custom Styles -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-midnight-blue text-off-white font-inter">
+    <!-- 
+      HEADER & NAVIGATION BAR 
+      - Fixed to the top.
+      - Starts transparent.
+      - A script will be added later to add a background color and blur on scroll.
+    -->
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    >
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2">
+            <!-- Heroicon: star (solid) -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6 text-radiant-gold"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434L10.788 3.21z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="font-poppins font-bold text-xl text-off-white"
+              >AllythePiper Foundation</span
+            >
+          </a>
+
+          <!-- Desktop Navigation Links -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+              >Our Causes</a
+            >
+            <a
+              href="#"
+              class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+              >Gallery</a
+            >
+            <a
+              href="#"
+              class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+              >Get Involved</a
+            >
+            <a
+              href="#"
+              class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+
+          <!-- CTA Button (Desktop) & Mobile Menu Toggle -->
+          <div class="flex items-center gap-4">
+            <a
+              href="#"
+              class="hidden md:inline-block px-6 py-2.5 rounded-md font-poppins font-semibold text-midnight-blue bg-gradient-to-r from-radiant-gold to-soft-orange hover:opacity-90 transition-opacity duration-300"
+            >
+              Donate Now
+            </a>
+
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button
+              id="mobile-menu-button"
+              class="md:hidden p-2 rounded-md text-off-white hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-radiant-gold"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Heroicon: bars-3 -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile menu will be built and inserted here in a later step -->
+    </header>
+
+    <!-- 
+      PAGE CONTENT WILL GO HERE
+      Adding some temporary content to enable scrolling and test the nav bar's fixed position.
+    -->
+    <main>
+      <!-- HERO SECTION START -->
+      <section
+        id="home"
+        class="relative min-h-screen flex items-center justify-center"
+      >
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+          <!-- The background image with a placeholder source -->
+          <img
+            src="media/WhatsApp Image 2025-08-19 at 3.08.58 PM.jpeg"
+            alt="Inspiring volunteers working together"
+            class="w-full h-full object-cover"
+          />
+          <!-- Semi-transparent overlay -->
+          <div class="absolute inset-0 bg-midnight-blue/60"></div>
+        </div>
+
+        <!-- Content Container -->
+        <div
+          class="relative z-10 container mx-auto px-6 text-center text-off-white"
+        >
+          <!-- Main Headline -->
+          <h1
+            class="font-poppins font-extrabold text-5xl md:text-7xl leading-tight"
+          >
+            Empowering Change,
+            <span
+              class="bg-gradient-to-r from-radiant-gold to-soft-orange bg-clip-text text-transparent"
+              >One Cause at a Time.</span
+            >
+          </h1>
+
+          <!-- Sub-headline -->
+          <p
+            class="max-w-3xl mx-auto mt-4 text-lg md:text-xl text-off-white/90"
+          >
+            We connect passion with purpose, funding critical projects in
+            education, health, and environmental conservation worldwide.
+          </p>
+
+          <!-- Call-to-Action Buttons -->
+          <div
+            class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <!-- Primary Button -->
+            <a
+              href="#"
+              class="px-8 py-3.5 rounded-md font-poppins font-semibold text-midnight-blue bg-gradient-to-r from-radiant-gold to-soft-orange hover:opacity-90 transition-opacity duration-300"
+            >
+              Donate Now
+            </a>
+            <!-- Secondary (Ghost) Button -->
+            <a
+              href="#"
+              class="px-8 py-3.5 rounded-md font-poppins font-semibold text-off-white bg-transparent border-2 border-radiant-gold hover:bg-radiant-gold hover:text-midnight-blue transition-colors duration-300"
+            >
+              Explore Our Causes
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- HERO SECTION END -->
+
+      <!-- OUR CAUSES SECTION START -->
+      <section id="causes" class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            >
+              Causes We Support
+            </h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+              From local classrooms to global conservation, we are dedicated to
+              fostering a better world. Explore the key areas where your support
+              makes a difference.
+            </p>
+          </div>
+
+          <!-- Causes Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+          >
+            <!-- Education Card -->
+            <div
+              class="bg-blue-900/30 rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/10 hover:-translate-y-2"
+            >
+              <!-- Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-yellow-400 mb-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0 0l-3-3m3 3l3-3"
+                />
+              </svg>
+              <!-- Title -->
+              <h3 class="text-xl font-semibold text-white">Education</h3>
+              <!-- Description -->
+              <p class="mt-2 text-gray-300">
+                Empowering future generations with access to quality education
+                and resources for lifelong learning.
+              </p>
+              <!-- Supported Initiatives -->
+              <p class="mt-4 font-semibold text-white">
+                Supported Initiatives:
+              </p>
+              <ul class="mt-2 space-y-1 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  DonorsChoose
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Scholarship America
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  UNICEF
+                </li>
+              </ul>
+            </div>
+
+            <!-- Environment Card -->
+            <div
+              class="bg-blue-900/30 rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/10 hover:-translate-y-2"
+            >
+              <!-- Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-yellow-400 mb-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 2a9.99 9.99 0 00-9 6h18a9.99 9.99 0 00-9-6zM3 10a9.99 9.99 0 009 6 9.99 9.99 0 009-6H3z"
+                />
+              </svg>
+              <!-- Title -->
+              <h3 class="text-xl font-semibold text-white">Environment</h3>
+              <!-- Description -->
+              <p class="mt-2 text-gray-300">
+                Protecting our planet through conservation efforts, advocacy,
+                and sustainable practices for future generations.
+              </p>
+              <!-- Supported Initiatives -->
+              <p class="mt-4 font-semibold text-white">
+                Supported Initiatives:
+              </p>
+              <ul class="mt-2 space-y-1 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  The Nature Conservancy
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  World Wildlife Fund
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Sierra Club
+                </li>
+              </ul>
+            </div>
+
+            <!-- Health Card -->
+            <div
+              class="bg-blue-900/30 rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/10 hover:-translate-y-2"
+            >
+              <!-- Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-yellow-400 mb-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 21.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+                />
+              </svg>
+              <!-- Title -->
+              <h3 class="text-xl font-semibold text-white">Health</h3>
+              <!-- Description -->
+              <p class="mt-2 text-gray-300">
+                Advancing healthcare access, research, and support for
+                individuals and families in need worldwide.
+              </p>
+              <!-- Supported Initiatives -->
+              <p class="mt-4 font-semibold text-white">
+                Supported Initiatives:
+              </p>
+              <ul class="mt-2 space-y-1 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  American Cancer Society
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  American Heart Association
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  St. Jude Children's Research Hospital
+                </li>
+              </ul>
+            </div>
+
+            <!-- Food & Hunger Card -->
+            <div
+              class="bg-blue-900/30 rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/10 hover:-translate-y-2"
+            >
+              <!-- Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-yellow-400 mb-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h18l-1.68 12.59a2 2 0 01-1.99 1.41H6.67a2 2 0 01-1.99-1.41L3 3zm9 16a2 2 0 100 4 2 2 0 000-4zm6 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              <!-- Title -->
+              <h3 class="text-xl font-semibold text-white">Food & Hunger</h3>
+              <!-- Description -->
+              <p class="mt-2 text-gray-300">
+                Combating hunger and ensuring access to nutritious meals for
+                vulnerable communities everywhere.
+              </p>
+              <!-- Supported Initiatives -->
+              <p class="mt-4 font-semibold text-white">
+                Supported Initiatives:
+              </p>
+              <ul class="mt-2 space-y-1 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Feeding America
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Meals on Wheels
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-4 h-4 text-yellow-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  No Kid Hungry
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- OUR CAUSES SECTION END -->
+
+      <!-- GALLERY SECTION START -->
+      <section id="gallery" class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            >
+              Glimpses of Our Impact
+            </h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+              Every picture tells a story of hope, progress, and the lives
+              you've helped change.
+            </p>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-12"
+          >
+            <!-- Image 1 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (1).jpg"
+                alt="Children in a classroom supported by the foundation"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 2 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (2).jpg"
+                alt="Volunteers planting trees in a reforestation project"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 3 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (3).jpg"
+                alt="Doctors providing free health checkups in a rural area"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 4 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (4).jpg"
+                alt="Volunteers distributing meals to families in need"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 5 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (5).jpg"
+                alt="Children smiling with new school supplies"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 6 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (6).jpg"
+                alt="Community members working on a clean water project"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 7 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (7).jpg"
+                alt="Young students reading books in a library"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 8 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (8).jpg"
+                alt="Volunteers providing food aid packages"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 9 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (9).jpg"
+                alt="Medical staff assisting children with vaccinations"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Image 10 -->
+            <div
+              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
+            >
+              <img
+                src="media/gallery-1 (10).jpg"
+                alt="Volunteers and community celebrating a new school building"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- GALLERY SECTION END -->
+
+      <!-- GET INVOLVED SECTION START -->
+      <section id="get-involved" class="py-16 sm:py-24 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            >
+              Make a Real Difference
+            </h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+              Your time, skills, and donations are the lifeblood of our mission.
+              Join us in creating lasting change.
+            </p>
+          </div>
+
+          <!-- Two-Column Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+            <!-- Volunteer Card -->
+            <div
+              class="bg-gray-800/50 rounded-xl p-8 border border-gray-700 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/10"
+            >
+              <!-- Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 h-12 text-yellow-400 mx-auto mb-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5V10H2v10h5m10-6a4 4 0 00-8 0m8 0a4 4 0 11-8 0m8 0v6m-8-6v6"
+                />
+              </svg>
+              <!-- Title -->
+              <h3 class="text-2xl font-bold text-white text-center">
+                Volunteer Your Time
+              </h3>
+              <!-- Description -->
+              <p class="mt-4 text-gray-300 text-center">
+                Lend your expertise and passion. Opportunities range from
+                mentoring and tutoring to organizing local events.
+              </p>
+              <!-- Examples -->
+              <ul class="mt-6 space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">•</span> Tutor with partners
+                  like TutorMe
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">•</span> Mentor through Big
+                  Brothers Big Sisters
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">•</span> Join local literacy &
+                  cleanup programs
+                </li>
+              </ul>
+              <!-- Button -->
+              <div class="mt-8 text-center">
+                <a
+                  href="#volunteer"
+                  class="inline-block px-6 py-3 border border-yellow-400 text-yellow-400 rounded-lg font-semibold transition duration-300 hover:bg-yellow-400 hover:text-gray-900"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            <!-- Donation Card -->
+            <div
+              class="bg-gray-800/50 rounded-xl p-8 border border-gray-700 transition-all duration-300 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-500/20"
+            >
+              <!-- Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-12 h-12 text-yellow-400 mx-auto mb-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M20 12H4m16 0a8 8 0 01-16 0m16 0a8 8 0 00-16 0"
+                />
+              </svg>
+              <!-- Title -->
+              <h3 class="text-2xl font-bold text-white text-center">
+                Make a Donation
+              </h3>
+              <!-- Description -->
+              <p class="mt-4 text-gray-300 text-center">
+                Every contribution, big or small, directly funds scholarships,
+                conservation efforts, and vital health research. 100% of your
+                donation goes to the cause.
+              </p>
+              <!-- Quick Note -->
+              <p class="mt-4 text-sm text-gray-400 text-center">
+                Secure donations processed via Stripe.
+              </p>
+              <!-- Button -->
+              <div class="mt-8 text-center">
+                <a
+                  href="#donate"
+                  class="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition duration-300"
+                >
+                  Donate Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- GET INVOLVED SECTION END -->
+
+      <!-- CONTACT & FOOTER SECTION START -->
+      <section id="contact" class="py-16 sm:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center">
+            <h2
+              class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+            >
+              Get In Touch
+            </h2>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+              Have questions or want to partner with us? We'd love to hear from
+              you.
+            </p>
+          </div>
+
+          <!-- Two-Column Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+            <!-- Contact Form -->
+            <form action="#" method="POST" class="space-y-6">
+              <!-- Full Name -->
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-300"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="mt-2 bg-gray-800 border border-gray-600 rounded-md p-3 w-full text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                />
+              </div>
+              <!-- Email -->
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-300"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="mt-2 bg-gray-800 border border-gray-600 rounded-md p-3 w-full text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                />
+              </div>
+              <!-- Message -->
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-300"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="mt-2 bg-gray-800 border border-gray-600 rounded-md p-3 w-full text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                ></textarea>
+              </div>
+              <!-- Submit Button -->
+              <div>
+                <button
+                  type="submit"
+                  class="w-full py-3 px-6 rounded-md font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+
+            <!-- Contact Details -->
+            <div class="flex flex-col gap-6 text-gray-300">
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-yellow-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2zm0-10c5.523 0 10 4.477 10 10 0 7.5-10 13-10 13S2 18.5 2 11c0-5.523 4.477-10 10-10z"
+                  />
+                </svg>
+                <p>123 Charity Lane, Hope City, 12345</p>
+              </div>
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-yellow-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 12H8m0 0l-6-6m6 6l6-6m0 0l6 6m-6-6v12"
+                  />
+                </svg>
+                <p>contact@allythepiper.org</p>
+              </div>
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-yellow-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5h2l2 5-2 2c1.5 2.5 4.5 5.5 7 7l2-2 5 2v2c0 1.104-.896 2-2 2h-2c-7.18 0-13-5.82-13-13V5c0-1.104.896-2 2-2z"
+                  />
+                </svg>
+                <p>(123) 456-7890</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="mt-16 pt-8 border-t border-gray-700 text-center">
+            <!-- Social Media -->
+            <div class="flex justify-center gap-6 mb-6">
+              <!-- Twitter -->
+              <a
+                href="#"
+                class="text-gray-400 hover:text-yellow-400 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.633 7.997c.013.18.013.36.013.54 0 5.497-4.184 11.827-11.827 11.827-2.35 0-4.54-.69-6.383-1.877.327.04.64.053.98.053 1.947 0 3.74-.66 5.163-1.787a4.158 4.158 0 01-3.882-2.89c.25.04.5.067.763.067.363 0 .727-.053 1.067-.14a4.152 4.152 0 01-3.327-4.073v-.053c.553.31 1.187.5 1.86.527a4.143 4.143 0 01-1.847-3.457c0-.753.2-1.44.553-2.04a11.81 11.81 0 008.567 4.353 4.676 4.676 0 01-.1-.953 4.153 4.153 0 017.18-2.84 8.145 8.145 0 002.627-1 4.15 4.15 0 01-1.82 2.293 8.305 8.305 0 002.387-.64 9.034 9.034 0 01-2.08 2.14z"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="text-gray-400 hover:text-yellow-400 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="#"
+                class="text-gray-400 hover:text-yellow-400 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <!-- Copyright -->
+            <p class="text-gray-400 text-sm">
+              © 2024 AllythePiper Foundation. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT & FOOTER SECTION END -->
+    </main>
+    <script>
+      // ===============================
+      // AllythePiper Foundation Website
+      // Vanilla JavaScript Interactivity
+      // ===============================
+
+      // --- Mobile Menu Toggle ---
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // --- Sticky Navigation on Scroll ---
+      const mainNav = document.getElementById("main-nav");
+
+      if (mainNav) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+            mainNav.classList.add("bg-gray-900/90", "backdrop-blur-sm");
+          } else {
+            mainNav.classList.remove("bg-gray-900/90", "backdrop-blur-sm");
+          }
+        });
+      }
+
+      // --- Smooth Scrolling for Anchor Links ---
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+
+          // Close mobile menu after clicking a link
+          if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // --- Section Fade-In on Scroll ---
+      // NOTE: For this to work, add the following CSS:
+      // .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+      // .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+      const fadeInSections = document.querySelectorAll(".fade-in-section");
+
+      const observerOptions = {
+        threshold: 0.15,
+      };
+
+      const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target); // only animate once
+          }
+        });
+      }, observerOptions);
+
+      fadeInSections.forEach((section) => {
+        sectionObserver.observe(section);
+      });
+    </script>
+  </body>
+</html>
