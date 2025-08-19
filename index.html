@@ -101,27 +101,32 @@
           <!-- Desktop Navigation Links -->
           <div class="hidden md:flex items-center space-x-8">
             <a
-              href="#"
+              href="#home"
               class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
               >Home</a
             >
             <a
-              href="#"
+              href="#causes"
               class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
               >Our Causes</a
             >
             <a
-              href="#"
+              href="learn-more.html"
+              class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+              >Learn More</a
+            >
+            <a
+              href="#gallery"
               class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
               >Gallery</a
             >
             <a
-              href="#"
+              href="#get-involved"
               class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
               >Get Involved</a
             >
             <a
-              href="#"
+              href="#contact"
               class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
               >Contact</a
             >
@@ -130,7 +135,7 @@
           <!-- CTA Button (Desktop) & Mobile Menu Toggle -->
           <div class="flex items-center gap-4">
             <a
-              href="#"
+              href="donate.html"
               class="hidden md:inline-block px-6 py-2.5 rounded-md font-poppins font-semibold text-midnight-blue bg-gradient-to-r from-radiant-gold to-soft-orange hover:opacity-90 transition-opacity duration-300"
             >
               Donate Now
@@ -162,7 +167,55 @@
           </div>
         </div>
       </nav>
-      <!-- Mobile menu will be built and inserted here in a later step -->
+
+      <!--
+        Mobile Menu
+        - Hidden by default.
+        - Toggled by the hamburger button.
+      -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden container mx-auto px-6 py-4 bg-midnight-blue/95"
+      >
+        <div class="flex flex-col items-center space-y-4">
+          <a
+            href="#home"
+            class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="#causes"
+            class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+            >Our Causes</a
+          >
+          <a
+            href="learn-more.html"
+            class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+            >Learn More</a
+          >
+          <a
+            href="#gallery"
+            class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+            >Gallery</a
+          >
+          <a
+            href="#get-involved"
+            class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+            >Get Involved</a
+          >
+          <a
+            href="#contact"
+            class="font-poppins font-semibold hover:text-radiant-gold transition-colors duration-300"
+            >Contact</a
+          >
+          <a
+            href="donate.html"
+            class="mt-2 px-6 py-2.5 rounded-md font-poppins font-semibold text-midnight-blue bg-gradient-to-r from-radiant-gold to-soft-orange hover:opacity-90 transition-opacity duration-300"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
     </header>
 
     <!-- 
@@ -216,14 +269,14 @@
           >
             <!-- Primary Button -->
             <a
-              href="#"
+              href="donate.html"
               class="px-8 py-3.5 rounded-md font-poppins font-semibold text-midnight-blue bg-gradient-to-r from-radiant-gold to-soft-orange hover:opacity-90 transition-opacity duration-300"
             >
               Donate Now
             </a>
             <!-- Secondary (Ghost) Button -->
             <a
-              href="#"
+              href="learn-more.html"
               class="px-8 py-3.5 rounded-md font-poppins font-semibold text-off-white bg-transparent border-2 border-radiant-gold hover:bg-radiant-gold hover:text-midnight-blue transition-colors duration-300"
             >
               Explore Our Causes
@@ -603,117 +656,46 @@
           </div>
 
           <!-- Gallery Grid -->
-          <div
-            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-12"
-          >
-            <!-- Image 1 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (1).jpg"
-                alt="Children in a classroom supported by the foundation"
-                class="w-full h-full object-cover"
-              />
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            <!-- Image 1 (spans 2 columns) -->
+            <div class="md:col-span-2 rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (1).jpg" alt="Children in a classroom supported by the foundation" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 2 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (2).jpg"
-                alt="Volunteers planting trees in a reforestation project"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (2).jpg" alt="Volunteers planting trees in a reforestation project" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 3 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (3).jpg"
-                alt="Doctors providing free health checkups in a rural area"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (3).jpg" alt="Doctors providing free health checkups in a rural area" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 4 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (4).jpg"
-                alt="Volunteers distributing meals to families in need"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (4).jpg" alt="Volunteers distributing meals to families in need" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 5 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (5).jpg"
-                alt="Children smiling with new school supplies"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (5).jpg" alt="Children smiling with new school supplies" class="w-full h-full object-cover">
             </div>
-
-            <!-- Image 6 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (6).jpg"
-                alt="Community members working on a clean water project"
-                class="w-full h-full object-cover"
-              />
+             <!-- Image 6 (spans 2 columns) -->
+            <div class="md:col-span-2 rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (6).jpg" alt="Community members working on a clean water project" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 7 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (7).jpg"
-                alt="Young students reading books in a library"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (7).jpg" alt="Young students reading books in a library" class="w-full h-full object-cover">
             </div>
-
-            <!-- Image 8 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (8).jpg"
-                alt="Volunteers providing food aid packages"
-                class="w-full h-full object-cover"
-              />
+             <!-- Image 8 (spans 2 columns) -->
+            <div class="md:col-span-2 rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (8).jpg" alt="Volunteers providing food aid packages" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 9 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (9).jpg"
-                alt="Medical staff assisting children with vaccinations"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (9).jpg" alt="Medical staff assisting children with vaccinations" class="w-full h-full object-cover">
             </div>
-
             <!-- Image 10 -->
-            <div
-              class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-yellow-500/20"
-            >
-              <img
-                src="media/gallery-1 (10).jpg"
-                alt="Volunteers and community celebrating a new school building"
-                class="w-full h-full object-cover"
-              />
+            <div class="rounded-lg overflow-hidden border-2 border-gray-800 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-500/20 hover:brightness-110">
+              <img src="media/gallery-1 (10).jpg" alt="Volunteers and community celebrating a new school building" class="w-full h-full object-cover">
             </div>
           </div>
         </div>
@@ -828,7 +810,7 @@
               <!-- Button -->
               <div class="mt-8 text-center">
                 <a
-                  href="#donate"
+                  href="donate.html"
                   class="inline-block px-8 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition duration-300"
                 >
                   Donate Now
@@ -1044,24 +1026,27 @@
       // ===============================
 
       // --- Mobile Menu Toggle ---
-      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
 
-      if (hamburgerBtn && mobileMenu) {
-        hamburgerBtn.addEventListener("click", () => {
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
       }
 
       // --- Sticky Navigation on Scroll ---
-      const mainNav = document.getElementById("main-nav");
+      const mainHeader = document.getElementById("main-header");
 
-      if (mainNav) {
+      if (mainHeader) {
         window.addEventListener("scroll", () => {
           if (window.scrollY > 50) {
-            mainNav.classList.add("bg-gray-900/90", "backdrop-blur-sm");
+            mainHeader.classList.add("bg-midnight-blue/95", "backdrop-blur-sm");
           } else {
-            mainNav.classList.remove("bg-gray-900/90", "backdrop-blur-sm");
+            mainHeader.classList.remove(
+              "bg-midnight-blue/95",
+              "backdrop-blur-sm"
+            );
           }
         });
       }
